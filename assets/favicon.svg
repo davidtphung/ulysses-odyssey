@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#04284A"/><stop offset="1" stop-color="#001E38"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="0.9"/>
+    </filter>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+  <rect x="1.1" y="1.1" width="29.8" height="29.8" rx="6.2" fill="none" stroke="#0E3A63" stroke-width="1"/>
+  <g filter="url(#glow)" transform="translate(1.28 1.68) scale(0.92)" fill="none" stroke="#0A70FC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="16" cy="8" r="2.7"/>
+    <path d="M16 10.7V25"/>
+    <path d="M9.4 16.7a6.6 6.6 0 0 0 13.2 0"/>
+    <path d="M10.8 14.2H21.2"/>
+  </g>
+  <g transform="translate(1.28 1.68) scale(0.92)" fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="16" cy="8" r="2.7"/>
+    <path d="M16 10.7V25"/>
+    <path d="M9.4 16.7a6.6 6.6 0 0 0 13.2 0"/>
+    <path d="M10.8 14.2H21.2"/>
+  </g>
+  <circle cx="16" cy="8" r="1.15" fill="#049FF3"/>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap');</style>
+  <defs>
+    <radialGradient id="bg" cx="38%" cy="30%" r="90%">
+      <stop offset="0%" stop-color="#062a4d"/><stop offset="55%" stop-color="#001E38"/><stop offset="100%" stop-color="#00111E"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="50%" cy="44%" r="62%">
+      <stop offset="60%" stop-color="#00111E" stop-opacity="0"/><stop offset="100%" stop-color="#00111E" stop-opacity="0.55"/>
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0.4">
+      <stop offset="0" stop-color="#0A70FC" stop-opacity="0.55"/><stop offset="1" stop-color="#0A70FC" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="og-glow" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="6"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#0E3A63" stroke-width="1" opacity="0.30"/></pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#vignette)"/>
+
+  <!-- instrument frame + corner ticks -->
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#0E3A63" stroke-width="1.5"/>
+  <path d="M40 70V40H70" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M1160 70V40H1130" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M40 560V590H70" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M1160 560V590H1130" fill="none" stroke="#0A70FC" stroke-width="3"/>
+
+  <!-- sonar console, right -->
+  <g><circle cx="948" cy="322" r="196" fill="none" stroke="#0E3A63" stroke-width="1.5"/><circle cx="948" cy="322" r="129.36" fill="none" stroke="#0E3A63" stroke-width="1.5"/><circle cx="948" cy="322" r="64.68" fill="none" stroke="#0E3A63" stroke-width="1.5"/><line x1="1130.28" y1="322" x2="1144" y2="322" stroke="#0E3A63" stroke-width="1.5"/><line x1="1105.86" y1="413.14" x2="1117.74" y2="420" stroke="#0E3A63" stroke-width="1.5"/><line x1="1039.14" y1="479.86" x2="1046" y2="491.74" stroke="#0E3A63" stroke-width="1.5"/><line x1="948" y1="504.28" x2="948" y2="518" stroke="#0E3A63" stroke-width="1.5"/><line x1="856.86" y1="479.86" x2="850" y2="491.74" stroke="#0E3A63" stroke-width="1.5"/><line x1="790.14" y1="413.14" x2="778.26" y2="420" stroke="#0E3A63" stroke-width="1.5"/><line x1="765.72" y1="322" x2="752" y2="322" stroke="#0E3A63" stroke-width="1.5"/><line x1="790.14" y1="230.86" x2="778.26" y2="224" stroke="#0E3A63" stroke-width="1.5"/><line x1="856.86" y1="164.14" x2="850" y2="152.26" stroke="#0E3A63" stroke-width="1.5"/><line x1="948" y1="139.72" x2="948" y2="126" stroke="#0E3A63" stroke-width="1.5"/><line x1="1039.14" y1="164.14" x2="1046" y2="152.26" stroke="#0E3A63" stroke-width="1.5"/><line x1="1105.86" y1="230.86" x2="1117.74" y2="224" stroke="#0E3A63" stroke-width="1.5"/><line x1="752" y1="322" x2="1144" y2="322" stroke="#0E3A63" stroke-width="1"/><line x1="948" y1="126" x2="948" y2="518" stroke="#0E3A63" stroke-width="1"/><path d="M948 322 L948 126 A196 196 0 0 1 1108.72 210.28 Z" fill="url(#sweep)"/><circle cx="1030.32" cy="247.52" r="5" fill="#049FF3"/>
+    <circle cx="889.2" cy="388.64" r="3.5" fill="#80B8F8"/>
+    <circle cx="979.36" cy="429.8" r="3" fill="#80B8F8"/><circle cx="948" cy="322" r="7" fill="#0A70FC" filter="url(#og-glow)"/></g>
+
+  <!-- wordmark -->
+  <g transform="translate(68.8 68.8) scale(1.7)" fill="none" stroke="#0A70FC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="16" cy="8" r="2.7"/>
+    <path d="M16 10.7V25"/>
+    <path d="M9.4 16.7a6.6 6.6 0 0 0 13.2 0"/>
+    <path d="M10.8 14.2H21.2"/>
+  </g>
+  <g transform="translate(68.8 68.8) scale(1.7)" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="16" cy="8" r="2.7"/>
+    <path d="M16 10.7V25"/>
+    <path d="M9.4 16.7a6.6 6.6 0 0 0 13.2 0"/>
+    <path d="M10.8 14.2H21.2"/>
+  </g>
+  <text x="138" y="90" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="30" fill="#FFFFFF" letter-spacing="6">ULYSSES</text>
+  <text x="139" y="118" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="15" fill="#80B8F8" letter-spacing="4" opacity="0.8">ENDURING ODYSSEY WATCH</text>
+
+  <!-- headline -->
+  <text x="78" y="278" font-family="'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="400" font-size="46" fill="#9DB2C6">through endurance,</text>
+  <text x="74" y="372" font-family="'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="600" font-size="98" fill="#FFFFFF" letter-spacing="-2">we steward</text>
+  <text x="74" y="466" font-family="'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="600" font-size="98" fill="#FFFFFF" letter-spacing="-2">the blue</text>
+
+  <!-- subhead -->
+  <text x="78" y="528" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#049FF3" letter-spacing="3">CREATIVE DIRECTION · DAVID T PHUNG</text>
+
+  <!-- footer line -->
+  <line x1="40" y1="566" x2="1160" y2="566" stroke="#0E3A63" stroke-width="1.5"/>
+  <circle cx="64" cy="592" r="5" fill="#0A70FC" filter="url(#og-glow)"/>
+  <text x="80" y="598" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#9DB2C6">davidtphung.github.io/ulysses-odyssey</text>
+  <text x="1160" y="598" text-anchor="end" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#80B8F8" letter-spacing="1">72H · MAKO · KRAKEN · LEVIATHAN</text>
+</svg>

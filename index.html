@@ -29,14 +29,16 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ulysses · Enduring Odyssey Watch" />
   <meta property="og:description" content="Through endurance, we steward the blue. A first-day creative point of view, built as proof." />
-  <meta property="og:image" content="assets/og.png" />
+  <meta property="og:url" content="https://davidtphung.github.io/ulysses-odyssey/" />
+  <link rel="canonical" href="https://davidtphung.github.io/ulysses-odyssey/" />
+  <meta property="og:image" content="https://davidtphung.github.io/ulysses-odyssey/assets/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Ulysses · we steward the blue. Deep navy card with a sonar console and the anchor mark." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ulysses · Enduring Odyssey Watch" />
   <meta name="twitter:description" content="Through endurance, we steward the blue. A first-day creative point of view, built as proof." />
-  <meta name="twitter:image" content="assets/og.png" />
+  <meta name="twitter:image" content="https://davidtphung.github.io/ulysses-odyssey/assets/og.png" />
   <meta name="twitter:creator" content="@davidtphung" />
 
   <!-- favicon + icons, on theme: the anchor mark in deep navy + electric blue -->
@@ -74,7 +76,7 @@
 
   <style>
     :root { color-scheme: dark; }
-    html { -webkit-text-size-adjust:100%; }
+    html { -webkit-text-size-adjust:100%; scroll-padding-top:5rem; }
     body { background:#00121F; overflow-x:hidden; }
     ::selection { background:#0A70FC; color:#fff; }
 
@@ -141,10 +143,10 @@
         </span>
       </a>
       <div class="hidden lg:flex items-center gap-7 font-mono text-[12px] tracking-widest text-mist">
-        <a href="#manifesto" class="hover:text-cyan transition">MANIFESTO</a>
-        <a href="#fleet" class="hover:text-cyan transition">FLEET</a>
-        <a href="#moodboard" class="hover:text-cyan transition">MOODBOARD</a>
-        <a href="#heritage" class="hover:text-cyan transition">HERITAGE</a>
+        <a href="#manifesto" class="nlink hover:text-cyan transition">MANIFESTO</a>
+        <a href="#fleet" class="nlink hover:text-cyan transition">FLEET</a>
+        <a href="#moodboard" class="nlink hover:text-cyan transition">MOODBOARD</a>
+        <a href="#heritage" class="nlink hover:text-cyan transition">HERITAGE</a>
         <a href="direction.html" class="hover:text-cyan transition">DIRECTION</a>
         <a href="#enlist" class="btn btn-blue px-4 py-2 text-[12px] font-bold tracking-widest">REPORT FOR DUTY</a>
       </div>
@@ -386,9 +388,15 @@
       <div class="flex items-center gap-4 mb-10 reveal">
         <span class="kicker">04 · HERITAGE</span><span class="h-px flex-1 bg-navy-line"></span>
       </div>
-      <h2 class="reveal head text-white text-[clamp(2rem,4.5vw,3.4rem)] max-w-3xl">one wake, <span class="text-blue glow-blue">two and a half centuries</span>.</h2>
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <h2 class="reveal head text-white text-[clamp(2rem,4.5vw,3.4rem)] max-w-3xl">one wake, <span class="text-blue glow-blue">two and a half centuries</span>.</h2>
+        <div class="reveal hidden sm:flex gap-2" data-delay="80">
+          <button id="hPrev" class="harrow grid place-items-center h-11 w-11 rounded-full btn-ghost" aria-label="Previous heritage card"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button id="hNext" class="harrow grid place-items-center h-11 w-11 rounded-full btn-ghost" aria-label="Next heritage card"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
     </div>
-    <div class="h-scroll flex gap-6 overflow-x-auto px-5 sm:px-8 pb-6 max-w-7xl mx-auto mt-10">
+    <div id="heritageScroll" class="h-scroll flex gap-6 overflow-x-auto px-5 sm:px-8 pb-6 max-w-7xl mx-auto mt-10">
       <article class="reveal shrink-0 w-[80vw] sm:w-[360px] panel rounded-2xl p-7">
         <div class="flex items-center justify-between"><span class="display text-blue glow-blue text-5xl">1775</span><span class="font-mono text-[10px] tracking-widest text-cyan px-2 py-1 rounded-full ring-1 ring-cyan/30">COURAGE</span></div>
         <h3 class="head text-white text-2xl mt-4">John Paul Jones</h3>
@@ -428,19 +436,19 @@
           <div class="col-span-2">WATCH</div><div class="col-span-3">PHASE</div><div class="col-span-4">OBJECTIVE</div><div class="col-span-3">VALUE</div>
         </div>
         <div class="grid md:grid-cols-12 gap-2 md:gap-4 px-6 py-6 border-b border-navy-line/70 hover:bg-blue/5 transition">
-          <div class="md:col-span-2 display text-blue text-3xl">0–30</div>
+          <div class="md:col-span-2 display text-blue text-3xl">0-30</div>
           <div class="md:col-span-3"><p class="head text-white text-xl">Make landfall</p></div>
           <div class="md:col-span-4 text-sm text-mist leading-relaxed">Stand up the studio and brand bible. Name the rules the site already follows. Audit theoceancompany.com.</div>
           <div class="md:col-span-3 font-mono text-[11px] tracking-widest text-cyan self-center">FRONTIER SPIRIT</div>
         </div>
         <div class="grid md:grid-cols-12 gap-2 md:gap-4 px-6 py-6 border-b border-navy-line/70 hover:bg-blue/5 transition">
-          <div class="md:col-span-2 display text-blue text-3xl">31–60</div>
+          <div class="md:col-span-2 display text-blue text-3xl">31-60</div>
           <div class="md:col-span-3"><p class="head text-white text-xl">Chart the waters</p></div>
           <div class="md:col-span-4 text-sm text-mist leading-relaxed">Ship the Mako launch campaign, the first film cut from real footage, and one refreshed vehicle page.</div>
           <div class="md:col-span-3 font-mono text-[11px] tracking-widest text-cyan self-center">HONOR · COURAGE</div>
         </div>
         <div class="grid md:grid-cols-12 gap-2 md:gap-4 px-6 py-6 hover:bg-blue/5 transition">
-          <div class="md:col-span-2 display text-blue text-3xl">61–90</div>
+          <div class="md:col-span-2 display text-blue text-3xl">61-90</div>
           <div class="md:col-span-3"><p class="head text-white text-xl">Take the tide</p></div>
           <div class="md:col-span-4 text-sm text-mist leading-relaxed">Scale to Kraken and Leviathan. Relaunch the site. Forge partnerships across science and defense.</div>
           <div class="md:col-span-3 font-mono text-[11px] tracking-widest text-cyan self-center">COMMITMENT</div>
@@ -554,6 +562,19 @@
       canvas.parentElement.addEventListener('mouseleave',function(){ mouse.x=-999; mouse.y=-999; });
       function draw(){ ctx.clearRect(0,0,w,h); for(var i=0;i<ps.length;i++){ var p=ps[i]; p.t+=p.tw; p.y+=p.vy; p.x+=p.vx; var dx=mouse.x-p.x,dy=mouse.y-p.y,d=Math.hypot(dx,dy); if(d<110){p.x+=dx*0.0009*(110-d);p.y+=dy*0.0009*(110-d);} if(p.y<-10){p.y=h+10;p.x=Math.random()*w;} if(p.x<-10)p.x=w+10; if(p.x>w+10)p.x=-10; var g=(Math.sin(p.t)*0.5+0.5); ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle='rgba(10,112,252,'+(p.a*(0.5+g*0.5))+')'; ctx.shadowColor='rgba(4,159,243,0.9)'; ctx.shadowBlur=7+g*7; ctx.fill(); } ctx.shadowBlur=0; requestAnimationFrame(draw); }
       size(); draw(); var rt; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(size,200); }, {passive:true}); }
+
+    /* scrollspy: highlight the active nav link */
+    var navLinks={}; document.querySelectorAll('.nlink').forEach(function(a){ navLinks[a.getAttribute('href')]=a; });
+    var spySections=['manifesto','fleet','moodboard','heritage'].map(function(id){return document.getElementById(id);}).filter(Boolean);
+    if(spySections.length){ var spy=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ Object.keys(navLinks).forEach(function(k){navLinks[k].classList.remove('on');}); var on=navLinks['#'+e.target.id]; if(on) on.classList.add('on'); } }); }, {rootMargin:'-45% 0px -50% 0px', threshold:0}); spySections.forEach(function(s){spy.observe(s);}); }
+
+    /* heritage scroller arrows */
+    var hs=document.getElementById('heritageScroll'), hp=document.getElementById('hPrev'), hn=document.getElementById('hNext');
+    if(hs && hp && hn){ var hstep=function(){ return Math.min(hs.clientWidth*0.85, 400); };
+      function hupd(){ hp.disabled=hs.scrollLeft<=4; hn.disabled=hs.scrollLeft>=hs.scrollWidth-hs.clientWidth-4; }
+      hp.addEventListener('click',function(){hs.scrollBy({left:-hstep(),behavior:'smooth'});});
+      hn.addEventListener('click',function(){hs.scrollBy({left:hstep(),behavior:'smooth'});});
+      hs.addEventListener('scroll',function(){requestAnimationFrame(hupd);},{passive:true}); hupd(); }
   })();
   </script>
 </body>

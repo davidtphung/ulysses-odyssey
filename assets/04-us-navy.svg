@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Space+Mono&amp;display=swap');</style>
+
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="32%" r="80%">
+      <stop offset="0%" stop-color="#001E38"/>
+      <stop offset="60%" stop-color="#001E38"/>
+      <stop offset="100%" stop-color="#00111E"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="34%" r="48%">
+      <stop offset="0%" stop-color="#0A70FC" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#0A70FC" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#0E3A63" stroke-width="1" opacity="0.28"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <rect width="1000" height="1000" fill="url(#grid)"/>
+  <rect width="1000" height="1000" fill="url(#halo)"/>
+  <rect x="40" y="40" width="920" height="920" fill="none" stroke="#0E3A63" stroke-width="1.5" opacity="0.7"/>
+  <path d="M40 66V40H66" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M960 66V40H934" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M40 934V960H66" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M960 934V960H934" fill="none" stroke="#0A70FC" stroke-width="3"/>
+  
+  <text x="62" y="120" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="58" fill="#FFFFFF" letter-spacing="2">04</text>
+  <text x="150" y="120" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#9DB2C6" opacity="0.8">/ 06</text>
+  <text x="938" y="116" text-anchor="end" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#049FF3" letter-spacing="3">INSTITUTIONAL DNA</text>
+  <line x1="62" y1="150" x2="938" y2="150" stroke="#0E3A63" stroke-width="1.5"/><g><circle cx="500" cy="470" r="236" fill="none" stroke="#0E3A63" stroke-width="1.5" opacity="0.7"/><g stroke="#0E3A63" stroke-width="2"><line x1="705" y1="470" x2="735" y2="470"/><line x1="714.44" y1="527.46" x2="726.99" y2="530.82"/><line x1="692.26" y1="581" x2="703.52" y2="587.5"/><line x1="656.98" y1="626.98" x2="666.17" y2="636.17"/><line x1="611" y1="662.26" x2="617.5" y2="673.52"/><line x1="557.46" y1="684.44" x2="560.82" y2="696.99"/><line x1="500" y1="675" x2="500" y2="705"/><line x1="442.54" y1="684.44" x2="439.18" y2="696.99"/><line x1="389" y1="662.26" x2="382.5" y2="673.52"/><line x1="343.02" y1="626.98" x2="333.83" y2="636.17"/><line x1="307.74" y1="581" x2="296.48" y2="587.5"/><line x1="285.56" y1="527.46" x2="273.01" y2="530.82"/><line x1="295" y1="470" x2="265" y2="470"/><line x1="285.56" y1="412.54" x2="273.01" y2="409.18"/><line x1="307.74" y1="359" x2="296.48" y2="352.5"/><line x1="343.02" y1="313.02" x2="333.83" y2="303.83"/><line x1="389" y1="277.74" x2="382.5" y2="266.48"/><line x1="442.54" y1="255.56" x2="439.18" y2="243.01"/><line x1="500" y1="265" x2="500" y2="235"/><line x1="557.46" y1="255.56" x2="560.82" y2="243.01"/><line x1="611" y1="277.74" x2="617.5" y2="266.48"/><line x1="656.98" y1="313.02" x2="666.17" y2="303.83"/><line x1="692.26" y1="359" x2="703.52" y2="352.5"/><line x1="714.44" y1="412.54" x2="726.99" y2="409.18"/></g><g stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(500,470)">
+    <circle cx="0" cy="-150" r="20"/>
+    <line x1="0" y1="-130" x2="0" y2="120"/>
+    <line x1="-66" y1="-96" x2="66" y2="-96"/>
+    <path d="M-120 36 C-120 120 -54 150 0 150 C54 150 120 120 120 36"/>
+    <path d="M-120 36 l-22 6 l16 18 Z" fill="#FFFFFF"/>
+    <path d="M120 36 l22 6 l-16 18 Z" fill="#FFFFFF"/>
+  </g>
+  <path d="M500 -150 m-6 14 C440 -40 560 40 470 110 C420 150 560 170 540 230" transform="translate(0,0)" fill="none" stroke="#049FF3" stroke-width="3.5" opacity="0.85" stroke-dasharray="2 9"/></g>
+  <circle cx="664" cy="306" r="34" fill="none" stroke="#0A70FC" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="664" cy="306" r="20" fill="none" stroke="#049FF3" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="664" cy="306" r="7" fill="#0A70FC" filter="url(#glow)"/>
+  <text x="500" y="772" text-anchor="middle" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#80B8F8" letter-spacing="4">HONOR · COURAGE · COMMITMENT</text>
+  <line x1="62" y1="838" x2="938" y2="838" stroke="#0E3A63" stroke-width="1.5"/>
+  <text x="62" y="908" font-family="'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="66" fill="#FFFFFF" letter-spacing="-1">US Navy</text>
+  <text x="62" y="946" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="21" fill="#80B8F8">fouled anchor · standing the watch</text>
+  <text x="62" y="980" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9DB2C6" letter-spacing="6" opacity="0.7">U L Y S S E S</text>
+  <text x="938" y="980" text-anchor="end" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9DB2C6" letter-spacing="2" opacity="0.7">MOODBOARD · 1000²</text>
+</svg>

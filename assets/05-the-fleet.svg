@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Space+Mono&amp;display=swap');</style>
+
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="32%" r="80%">
+      <stop offset="0%" stop-color="#001E38"/>
+      <stop offset="60%" stop-color="#001E38"/>
+      <stop offset="100%" stop-color="#00111E"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="34%" r="48%">
+      <stop offset="0%" stop-color="#0A70FC" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#0A70FC" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#0E3A63" stroke-width="1" opacity="0.28"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <rect width="1000" height="1000" fill="url(#grid)"/>
+  <rect width="1000" height="1000" fill="url(#halo)"/>
+  <rect x="40" y="40" width="920" height="920" fill="none" stroke="#0E3A63" stroke-width="1.5" opacity="0.7"/>
+  <path d="M40 66V40H66" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M960 66V40H934" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M40 934V960H66" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M960 934V960H934" fill="none" stroke="#0A70FC" stroke-width="3"/>
+  
+  <text x="62" y="120" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="58" fill="#FFFFFF" letter-spacing="2">05</text>
+  <text x="150" y="120" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#9DB2C6" opacity="0.8">/ 06</text>
+  <text x="938" y="116" text-anchor="end" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#049FF3" letter-spacing="3">THE FLEET</text>
+  <line x1="62" y1="150" x2="938" y2="150" stroke="#0E3A63" stroke-width="1.5"/><g><g stroke="#0E3A63" stroke-width="1.2" stroke-dasharray="3 10" opacity="0.6"><line x1="80" y1="300" x2="920" y2="300"/><text x="86" y="292" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="14" fill="#9DB2C6" opacity="0.7">1000 ft</text><line x1="80" y1="378" x2="920" y2="378"/><text x="86" y="370" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="14" fill="#9DB2C6" opacity="0.7">2000 ft</text><line x1="80" y1="456" x2="920" y2="456"/><text x="86" y="448" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="14" fill="#9DB2C6" opacity="0.7">3000 ft</text><line x1="80" y1="534" x2="920" y2="534"/><text x="86" y="526" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="14" fill="#9DB2C6" opacity="0.7">4000 ft</text><line x1="80" y1="612" x2="920" y2="612"/><text x="86" y="604" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="14" fill="#9DB2C6" opacity="0.7">5000 ft</text></g><g fill="none" stroke="#0A70FC" stroke-width="1.5" opacity="0.55"><path d="M150 360 m-40 0 a40 40 0 0 1 40 -40" /><path d="M150 360 m-90 0 a90 90 0 0 1 90 -90" /><path d="M150 360 m-140 0 a140 140 0 0 1 140 -140" /><path d="M150 360 m-190 0 a190 190 0 0 1 190 -190" /><path d="M150 360 m-240 0 a240 240 0 0 1 240 -240" /></g><g transform="translate(420,690)"><path d="M-200 0 C-150 -34 150 -34 230 0 C150 34 -150 34 -200 0 Z" fill="#00111E" stroke="#80B8F8" stroke-width="2.5"/>
+    <path d="M40 -28 L40 -64 L96 -28 Z" fill="#04284A" stroke="#80B8F8" stroke-width="1.5"/>
+    <circle cx="-150" cy="0" r="5" fill="#049FF3"/><circle cx="-90" cy="0" r="5" fill="#049FF3"/></g>
+    <text x="420" y="760" text-anchor="middle" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#80B8F8">LEVIATHAN</text><g transform="translate(620,520)"><rect x="-90" y="-50" width="180" height="100" rx="10" fill="none" stroke="#80B8F8" stroke-width="2.5"/>
+    <line x1="-90" y1="-16" x2="90" y2="-16" stroke="#0E3A63" stroke-width="1.5"/><line x1="-90" y1="16" x2="90" y2="16" stroke="#0E3A63" stroke-width="1.5"/>
+    <path d="M-90 0 L-130 -26 M-90 0 L-130 26 M90 0 L130 -26 M90 0 L130 26" stroke="#049FF3" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="9" fill="#0A70FC" filter="url(#glow)"/></g>
+    <text x="620" y="600" text-anchor="middle" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#80B8F8">KRAKEN</text><g transform="translate(360,338)"><path d="M-120 0 C-80 -22 80 -22 120 0 C80 22 -80 22 -120 0 Z" fill="#04284A" stroke="#80B8F8" stroke-width="2.5"/>
+    <path d="M70 -14 L110 -40 L86 -8 Z" fill="#049FF3"/><circle cx="-70" cy="0" r="5" fill="#0A70FC"/></g>
+    <text x="360" y="300" text-anchor="middle" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="17" fill="#80B8F8">MAKO</text></g>
+  <circle cx="150" cy="360" r="34" fill="none" stroke="#0A70FC" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="150" cy="360" r="20" fill="none" stroke="#049FF3" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="150" cy="360" r="7" fill="#0A70FC" filter="url(#glow)"/>
+  
+  <line x1="62" y1="838" x2="938" y2="838" stroke="#0E3A63" stroke-width="1.5"/>
+  <text x="62" y="908" font-family="'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="66" fill="#FFFFFF" letter-spacing="-1">The Fleet</text>
+  <text x="62" y="946" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="21" fill="#80B8F8">one vehicle · infinite possibilities</text>
+  <text x="62" y="980" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9DB2C6" letter-spacing="6" opacity="0.7">U L Y S S E S</text>
+  <text x="938" y="980" text-anchor="end" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9DB2C6" letter-spacing="2" opacity="0.7">MOODBOARD · 1000²</text>
+</svg>

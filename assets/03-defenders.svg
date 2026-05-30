@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Space+Mono&amp;display=swap');</style>
+
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="32%" r="80%">
+      <stop offset="0%" stop-color="#001E38"/>
+      <stop offset="60%" stop-color="#001E38"/>
+      <stop offset="100%" stop-color="#00111E"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="34%" r="48%">
+      <stop offset="0%" stop-color="#0A70FC" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#0A70FC" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#0E3A63" stroke-width="1" opacity="0.28"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <rect width="1000" height="1000" fill="url(#grid)"/>
+  <rect width="1000" height="1000" fill="url(#halo)"/>
+  <rect x="40" y="40" width="920" height="920" fill="none" stroke="#0E3A63" stroke-width="1.5" opacity="0.7"/>
+  <path d="M40 66V40H66" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M960 66V40H934" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M40 934V960H66" fill="none" stroke="#0A70FC" stroke-width="3"/><path d="M960 934V960H934" fill="none" stroke="#0A70FC" stroke-width="3"/>
+  
+  <text x="62" y="120" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="58" fill="#FFFFFF" letter-spacing="2">03</text>
+  <text x="150" y="120" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="22" fill="#9DB2C6" opacity="0.8">/ 06</text>
+  <text x="938" y="116" text-anchor="end" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#049FF3" letter-spacing="3">HISTORICAL INSPIRATION</text>
+  <line x1="62" y1="150" x2="938" y2="150" stroke="#0E3A63" stroke-width="1.5"/><g><rect x="348" y="248" width="304" height="342" fill="none" stroke="#80B8F8" stroke-width="2" opacity="0.6"/><line x1="350" y1="250" x2="650" y2="250" stroke="#80B8F8" stroke-width="13" opacity="0.9"/><line x1="350" y1="276" x2="650" y2="276" stroke="#0E3A63" stroke-width="13" opacity="0.7"/><line x1="350" y1="302" x2="650" y2="302" stroke="#80B8F8" stroke-width="13" opacity="0.9"/><line x1="350" y1="328" x2="650" y2="328" stroke="#0E3A63" stroke-width="13" opacity="0.7"/><line x1="350" y1="354" x2="650" y2="354" stroke="#80B8F8" stroke-width="13" opacity="0.9"/><line x1="350" y1="380" x2="650" y2="380" stroke="#0E3A63" stroke-width="13" opacity="0.7"/><line x1="350" y1="406" x2="650" y2="406" stroke="#80B8F8" stroke-width="13" opacity="0.9"/><line x1="350" y1="432" x2="650" y2="432" stroke="#0E3A63" stroke-width="13" opacity="0.7"/><line x1="350" y1="458" x2="650" y2="458" stroke="#80B8F8" stroke-width="13" opacity="0.9"/><line x1="350" y1="484" x2="650" y2="484" stroke="#0E3A63" stroke-width="13" opacity="0.7"/><line x1="350" y1="510" x2="650" y2="510" stroke="#80B8F8" stroke-width="13" opacity="0.9"/><line x1="350" y1="536" x2="650" y2="536" stroke="#0E3A63" stroke-width="13" opacity="0.7"/><line x1="350" y1="562" x2="650" y2="562" stroke="#80B8F8" stroke-width="13" opacity="0.9"/><rect x="350" y="250" width="130" height="104" fill="#00111E" stroke="#0A70FC" stroke-width="2"/>
+    <path d="M415 268 l9 27 h28 l-23 17 9 27 -23 -17 -23 17 9 -27 -23 -17 h28 z" fill="#049FF3"/><g stroke="#80B8F8" stroke-width="3" fill="none" opacity="0.85" transform="translate(500,640)">
+    <path d="M-70 30 C-30 -10 30 -10 70 30"/><path d="M70 30 C30 -10 -30 -10 -70 30"/>
+    <circle cx="-70" cy="32" r="5" fill="#0A70FC"/><circle cx="70" cy="32" r="5" fill="#0A70FC"/></g></g><text x="500" y="715" text-anchor="middle" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="20" fill="#80B8F8" letter-spacing="3" opacity="0.95">I HAVE NOT YET BEGUN TO FIGHT</text>
+  <circle cx="820" cy="300" r="34" fill="none" stroke="#0A70FC" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="820" cy="300" r="20" fill="none" stroke="#049FF3" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="820" cy="300" r="7" fill="#0A70FC" filter="url(#glow)"/>
+  
+  <line x1="62" y1="838" x2="938" y2="838" stroke="#0E3A63" stroke-width="1.5"/>
+  <text x="62" y="908" font-family="'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="66" fill="#FFFFFF" letter-spacing="-1">Defenders</text>
+  <text x="62" y="946" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="21" fill="#80B8F8">John Paul Jones · father of the Navy · 1775</text>
+  <text x="62" y="980" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9DB2C6" letter-spacing="6" opacity="0.7">U L Y S S E S</text>
+  <text x="938" y="980" text-anchor="end" font-family="'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace" font-size="16" fill="#9DB2C6" letter-spacing="2" opacity="0.7">MOODBOARD · 1000²</text>
+</svg>

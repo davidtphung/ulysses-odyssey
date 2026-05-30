@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<!--
+  CREATIVE DESIGN DIRECTION  .  Ulysses (theoceancompany.com)
+  A first-day point of view by David T Phung.
+
+  Built to two references:
+   .  Substance and aesthetics follow the real theoceancompany.com, whose
+      title is "Stewarding the Oceans | Ulysses": a deep navy canvas
+      (#001E38), one electric blue signal (#0A70FC), white type, lowercase
+      poetic headlines, and a confident technical voice. Real vocabulary:
+      "we steward the oceans", "one vehicle, infinite possibilities",
+      "persistent maritime capability", and the Mako / Kraken / Leviathan
+      vehicle system.
+   .  Form and clarity follow benji.org/liveline: a title, a one line
+      subhead, a framing question, a small metadata block, then plainly
+      labelled sections and named principles.
+
+  Notes for editing:
+   .  COLORS / FONTS live in the tailwind.config block below.
+   .  The live brand reads as a geometric sans. This study uses open
+      stand-ins: Space Grotesk for display, Inter for body, Space Mono for
+      labels and specs.
+   .  House rule, kept on purpose: there is not one em dash in the copy.
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Creative Design Direction . Ulysses . David T Phung</title>
+  <meta name="description" content="A first-day creative design direction for Ulysses (theoceancompany.com). How the brand should look, sound, and feel as the fleet grows, written plainly and grounded in the site that already exists." />
+  <meta name="author" content="David T Phung" />
+  <meta name="theme-color" content="#001E38" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Creative Design Direction . Ulysses" />
+  <meta property="og:description" content="Grow the depth, keep the silence. A point of view on the Ulysses brand, grounded in the work that already exists." />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23001E38'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%230A70FC'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { DEFAULT:'#001E38', deep:'#00121F', panel:'#04284A' },
+            blue:  '#0A70FC',
+            cyan:  '#049FF3',
+            mist:  '#9DB2C6',
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+            sans:    ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono:    ['"Space Mono"', 'ui-monospace', 'monospace'],
+          },
+          letterSpacing: { label: '0.18em' },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    :root { color-scheme: dark; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { background:#001E38; }
+    ::selection { background:#0A70FC; color:#ffffff; }
+
+    ::-webkit-scrollbar { width:10px; height:10px; }
+    ::-webkit-scrollbar-track { background:#00121F; }
+    ::-webkit-scrollbar-thumb { background:#0A70FC; border-radius:99px; border:3px solid #00121F; }
+    :focus-visible { outline:2px solid #049FF3; outline-offset:3px; border-radius:2px; }
+
+    .reading { max-width:42rem; }
+    .wide    { max-width:56rem; }
+
+    /* ocean at night: a single quiet glow up top */
+    .nightglow { background:
+      radial-gradient(80% 60% at 50% -10%, rgba(10,112,252,0.22), transparent 60%),
+      radial-gradient(50% 40% at 85% 8%, rgba(4,159,243,0.10), transparent 60%); }
+
+    .display { font-family:"Space Grotesk", system-ui, sans-serif; font-weight:500; line-height:1.02; letter-spacing:-0.02em; }
+    .head    { font-family:"Space Grotesk", system-ui, sans-serif; font-weight:500; line-height:1.12; letter-spacing:-0.01em; }
+    .lede    { font-family:"Space Grotesk", system-ui, sans-serif; font-weight:400; }
+    .body-copy p { margin-top:1.15rem; line-height:1.66; color:#C6D4E2; font-size:1.075rem; }
+    .body-copy p:first-child { margin-top:0; }
+
+    .kicker { font-family:"Space Mono", monospace; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; color:#5ca0f5; }
+    .rule   { height:1px; background:rgba(157,178,198,0.18); }
+
+    .principle p { line-height:1.62; color:#C6D4E2; }
+    .principle .lead { font-family:"Space Grotesk", system-ui, sans-serif; font-weight:600; color:#ffffff; }
+
+    .rise { opacity:0; transform:translateY(12px); transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+    .rise.in { opacity:1; transform:none; }
+    @media (prefers-reduced-motion: reduce){ .rise{opacity:1;transform:none;transition:none} *{scroll-behavior:auto!important} }
+
+    .panel { background:#00121F; }
+    .link { color:#5ca0f5; text-decoration:none; border-bottom:1px solid rgba(92,160,245,0.4); transition:color .2s, border-color .2s; }
+    .link:hover { color:#ffffff; border-color:#ffffff; }
+    .signal { display:inline-block; width:7px; height:7px; border-radius:99px; background:#0A70FC; box-shadow:0 0 12px 2px rgba(10,112,252,0.8); }
+  </style>
+</head>
+
+<body class="font-sans text-mist antialiased">
+
+  <header class="border-b border-white/10">
+    <div class="mx-auto wide px-6 sm:px-8 h-14 flex items-center justify-between">
+      <span class="font-display text-[15px] font-medium tracking-tight text-white">Ulysses</span>
+      <span class="kicker">Creative direction study</span>
+    </div>
+  </header>
+
+  <!-- TITLE -->
+  <section class="nightglow">
+    <div class="mx-auto wide px-6 sm:px-8 pt-20 sm:pt-28 pb-10">
+      <p class="kicker rise"><span class="signal align-middle mr-2"></span>A point of view</p>
+      <h1 class="display rise mt-6 text-white text-[clamp(2.6rem,8vw,5.5rem)]">creative design direction</h1>
+      <p class="lede rise mt-6 text-[clamp(1.2rem,3vw,1.7rem)] text-mist reading" style="line-height:1.34">
+        How the brand should look, sound, and feel as the fleet grows. Written plainly, and grounded in the site that already exists.
+      </p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="mx-auto reading px-6 sm:px-8 pb-14 body-copy rise">
+    <p>Ulysses already has a real point of view. The site is a deep navy ocean with one electric blue signal running through it. The headline reads in lowercase, calm and sure: "we steward the oceans." Nothing shouts. The water and the work do the talking.</p>
+    <p>So the question is not how to add more. It is how to grow the depth while keeping the silence. This is the direction I would hold from day one.</p>
+  </section>
+
+  <!-- METADATA -->
+  <section class="mx-auto reading px-6 sm:px-8 pb-16">
+    <div class="rule mb-8 rise"></div>
+    <dl class="grid grid-cols-2 sm:grid-cols-4 gap-y-6 gap-x-4 rise">
+      <div><dt class="kicker">Role</dt><dd class="mt-2 text-[15px] text-white">Creative Director, proposed</dd></div>
+      <div><dt class="kicker">Author</dt><dd class="mt-2 text-[15px] text-white">David T Phung</dd></div>
+      <div><dt class="kicker">Date</dt><dd class="mt-2 text-[15px] text-white">May 2026</dd></div>
+      <div><dt class="kicker">Scope</dt><dd class="mt-2 text-[15px] text-white">Brand, web, film, recruiting</dd></div>
+    </dl>
+    <div class="rule mt-8 rise"></div>
+  </section>
+
+  <!-- 01 -->
+  <section class="mx-auto reading px-6 sm:px-8 py-12">
+    <p class="kicker rise">01 . What the brand already gets right</p>
+    <h2 class="head rise mt-4 text-white text-[clamp(1.7rem,4vw,2.4rem)]">A strong point of view, built from very little.</h2>
+    <div class="body-copy rise mt-6">
+      <p>The palette is the ocean at night. Deep navy fills the screen, white carries the words, and one electric blue stands in for the live signal. Color is rationed, so the blue actually means something when it appears.</p>
+      <p>The headlines run lowercase and human. "we steward the oceans" is the entire thesis in four words. The voice underneath it is confident and technical, the language of an operator, not a marketer.</p>
+      <p>Most of all, the brand sells a system. One vehicle, infinite possibilities. Mako works the water column, Kraken handles launch and recovery and recharge, Leviathan is on the horizon. This is a brand that already thinks in fleets. My job is to make every surface feel as engineered as the vehicles.</p>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section class="mx-auto reading px-6 sm:px-8 py-12">
+    <p class="kicker rise">02 . The problem</p>
+    <h2 class="head rise mt-4 text-white text-[clamp(1.7rem,4vw,2.4rem)]">One brand, talking to very different rooms.</h2>
+    <div class="body-copy rise mt-6">
+      <p>Ulysses speaks to climate science, to defense, and to energy, often in the same week. Each of those rooms wants its own brochure, its own tone, its own promises. The risk is that the brand fractures into three voices and loses the single line that makes it Ulysses.</p>
+      <p>There is a second pressure. As the fleet and the team grow, more pages and more words arrive, each one reasonable on its own. Restraint dies by a thousand sensible additions if no one is guarding it.</p>
+      <p>The work is to hold one identity across the Atlantic and the Pacific, across science and security, all from one platform and one voice.</p>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="mx-auto reading px-6 sm:px-8 py-12">
+    <p class="kicker rise">03 . The direction</p>
+    <h2 class="head rise mt-4 text-white text-[clamp(1.7rem,4vw,2.4rem)]">Five principles guide everything I would make.</h2>
+    <div class="mt-10 space-y-9">
+      <div class="principle rise"><p><span class="lead">One live signal.</span> The electric blue is telemetry, not decoration. Reserve it for things that are genuinely live: a vehicle on station, a reading coming back, a mission under way. When everything glows, nothing reads as alive.</p></div>
+      <div class="principle rise"><p><span class="lead">The ocean at night.</span> Deep navy is the canvas, and most of the screen stays dark and quiet. Light arrives only where the work is. That restraint is exactly what makes the data feel real.</p></div>
+      <div class="principle rise"><p><span class="lead">Lowercase for the creed, mono for the proof.</span> Keep the poetic lines lowercase and human, the way the homepage already does. Keep specs, telemetry, and labels in mono so the numbers read as measured. Two registers, one brand.</p></div>
+      <div class="principle rise"><p><span class="lead">Sell the system, not the boat.</span> Every hero answers "one vehicle, infinite possibilities" before it shows a single part. Mako, Kraken, and Leviathan are characters in one fleet, never three separate products.</p></div>
+      <div class="principle rise"><p><span class="lead">Proof at depth.</span> Show the real numbers, named plainly. 72 hours on station, 5000 feet down, 200 pounds of payload. Persistent maritime capability is a claim you earn with figures, not adjectives.</p></div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="mx-auto reading px-6 sm:px-8 py-12">
+    <p class="kicker rise">04 . The system</p>
+    <h2 class="head rise mt-4 text-white text-[clamp(1.7rem,4vw,2.4rem)]">The tactical detail, kept short.</h2>
+    <div class="mt-8 divide-y divide-white/10 rise">
+      <div class="grid sm:grid-cols-[8rem,1fr] gap-1 sm:gap-6 py-4">
+        <p class="kicker pt-1">Type</p>
+        <p class="text-[1.02rem] leading-relaxed text-mist">A geometric sans for headlines, often set lowercase. A neutral sans for body. A mono for specs and telemetry. The live site reads as a geometric sans, and this study uses Space Grotesk, Inter, and Space Mono as open stand-ins.</p>
+      </div>
+      <div class="grid sm:grid-cols-[8rem,1fr] gap-1 sm:gap-6 py-4">
+        <p class="kicker pt-1">Color</p>
+        <p class="text-[1.02rem] leading-relaxed text-mist">Deep navy #001E38 as the base. Electric blue #0A70FC for live signal. A cooler cyan #049FF3 for secondary data. White for text. The blue is rationed, never sprinkled.</p>
+      </div>
+      <div class="grid sm:grid-cols-[8rem,1fr] gap-1 sm:gap-6 py-4">
+        <p class="kicker pt-1">Space</p>
+        <p class="text-[1.02rem] leading-relaxed text-mist">Dark, wide, and patient. Most of the canvas stays empty water. Content surfaces in focused pools of light rather than filling the frame.</p>
+      </div>
+      <div class="grid sm:grid-cols-[8rem,1fr] gap-1 sm:gap-6 py-4">
+        <p class="kicker pt-1">Motion</p>
+        <p class="text-[1.02rem] leading-relaxed text-mist">Slow currents and live readouts. Things drift and pulse like instruments, they do not bounce. If a motion is not telemetry, it is decoration, and it goes.</p>
+      </div>
+      <div class="grid sm:grid-cols-[8rem,1fr] gap-1 sm:gap-6 py-4">
+        <p class="kicker pt-1">Voice</p>
+        <p class="text-[1.02rem] leading-relaxed text-mist">Confident and technical, with room for one poetic line. Lowercase for the creed, precise for the spec. No hype, because the capability is the flex.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="mx-auto reading px-6 sm:px-8 py-12">
+    <p class="kicker rise">05 . How it shows up</p>
+    <h2 class="head rise mt-4 text-white text-[clamp(1.7rem,4vw,2.4rem)]">Same brand, five surfaces.</h2>
+    <div class="mt-8 divide-y divide-white/10 rise">
+      <div class="grid sm:grid-cols-[8rem,1fr] gap-1 sm:gap-6 py-4">
+        <p class="kicker pt-1">Web</p>
+        <p class="text-[1.02rem] leading-relaxed text-mist">The marketing site stays a dark, quiet bridge. Depth lives in vehicle and mission pages that read like telemetry, not brochures.</p>
+      </div>
+      <div class="grid sm:grid-cols-[8rem,1fr] gap-1 sm:gap-6 py-4">
+        <p class="kicker pt-1">Film</p>
+        <p class="text-[1.02rem] leading-relaxed text-mist">Shot at sea and subsea. Long takes, sonar and water for sound, and electric blue only where the system is working.</p>
+      </div>
+      <div class="grid sm:grid-cols-[8rem,1fr] gap-1 sm:gap-6 py-4">
+        <p class="kicker pt-1">Defense and science</p>
+        <p class="text-[1.02rem] leading-relaxed text-mist">The same brand, tuned for the room. Clear specs, honest limits, dual domain capability stated plainly. Seriousness reads as credibility.</p>
+      </div>
+      <div class="grid sm:grid-cols-[8rem,1fr] gap-1 sm:gap-6 py-4">
+        <p class="kicker pt-1">Recruiting</p>
+        <p class="text-[1.02rem] leading-relaxed text-mist">Engineers trust restraint. A careers page that respects attention will pull the people who build hard things at depth.</p>
+      </div>
+      <div class="grid sm:grid-cols-[8rem,1fr] gap-1 sm:gap-6 py-4">
+        <p class="kicker pt-1">Social</p>
+        <p class="text-[1.02rem] leading-relaxed text-mist">One clip from a real mission, one mono line of data, posted only when there is something true to report.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section class="mx-auto reading px-6 sm:px-8 py-12">
+    <p class="kicker rise">06 . The first 90 days</p>
+    <h2 class="head rise mt-4 text-white text-[clamp(1.7rem,4vw,2.4rem)]">Prove the system by flying it, not by presenting it.</h2>
+    <div class="body-copy rise mt-6">
+      <p>Write down the rules the site already follows by instinct, then turn them into a real system. Most of the early work is naming what is already true.</p>
+      <p>Then ship three things. A short brand guide. One refreshed vehicle page that reads like a console. One mission film cut from real footage. Small, finished, and live beats large and theoretical every time.</p>
+    </div>
+  </section>
+
+  <!-- MOODBOARD -->
+  <section class="mx-auto wide px-6 sm:px-8 py-12">
+    <p class="kicker rise">07 . The moodboard</p>
+    <h2 class="head rise mt-4 text-white text-[clamp(1.7rem,4vw,2.4rem)]">Artifacts and historical inspirations.</h2>
+    <p class="body-copy rise mt-6" style="margin-top:1.25rem"><span style="color:#C6D4E2">Six reference artifacts that set the tone, each a self contained 1000 by 1000 graphic in the Ulysses palette. Voyagers and defenders, the US Navy watch, the fleet, and the mission. Tap any tile to open it full size.</span></p>
+    <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+      <a href="assets/01-voyagers.svg" target="_blank" rel="noopener" class="rise block rounded-xl overflow-hidden border border-white/10 hover:border-blue/60 transition">
+        <img src="assets/01-voyagers.png" width="1000" height="1000" loading="lazy" alt="Voyagers tile: celestial navigation, a constellation and a hull on a sine sea. Odysseus, the long way home." class="w-full h-auto block" />
+      </a>
+      <a href="assets/02-endurance.svg" target="_blank" rel="noopener" class="rise block rounded-xl overflow-hidden border border-white/10 hover:border-blue/60 transition">
+        <img src="assets/02-endurance.png" width="1000" height="1000" loading="lazy" alt="Endurance tile: a ship wedged in pack ice under a low sun. Shackleton, 1914." class="w-full h-auto block" />
+      </a>
+      <a href="assets/03-defenders.svg" target="_blank" rel="noopener" class="rise block rounded-xl overflow-hidden border border-white/10 hover:border-blue/60 transition">
+        <img src="assets/03-defenders.png" width="1000" height="1000" loading="lazy" alt="Defenders tile: an early naval ensign and crossed sabres. John Paul Jones, 1775." class="w-full h-auto block" />
+      </a>
+      <a href="assets/04-us-navy.svg" target="_blank" rel="noopener" class="rise block rounded-xl overflow-hidden border border-white/10 hover:border-blue/60 transition">
+        <img src="assets/04-us-navy.png" width="1000" height="1000" loading="lazy" alt="US Navy tile: a fouled anchor in a compass ring. Honor, courage, commitment." class="w-full h-auto block" />
+      </a>
+      <a href="assets/05-the-fleet.svg" target="_blank" rel="noopener" class="rise block rounded-xl overflow-hidden border border-white/10 hover:border-blue/60 transition">
+        <img src="assets/05-the-fleet.png" width="1000" height="1000" loading="lazy" alt="The Fleet tile: Mako, Kraken, and Leviathan on depth lines with a sonar ping." class="w-full h-auto block" />
+      </a>
+      <a href="assets/06-stewardship.svg" target="_blank" rel="noopener" class="rise block rounded-xl overflow-hidden border border-white/10 hover:border-blue/60 transition">
+        <img src="assets/06-stewardship.png" width="1000" height="1000" loading="lazy" alt="Stewardship tile: bioluminescent seagrass beneath a wave. We steward the oceans." class="w-full h-auto block" />
+      </a>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="panel mt-12 border-t border-white/10">
+    <div class="mx-auto reading px-6 sm:px-8 py-20 sm:py-28">
+      <p class="kicker rise"><span class="signal align-middle mr-2"></span>In one line</p>
+      <p class="display rise mt-6 text-white text-[clamp(1.7rem,4.6vw,3rem)]" style="line-height:1.12">
+        the vehicles stay out for days, see what no one has seen, and report only what is real. the brand should run on the same power.
+      </p>
+      <p class="rise mt-7 text-mist text-[1.05rem] leading-relaxed reading">
+        Keep it dark, keep it precise, and let one blue signal carry the life.
+      </p>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 bg-navy-deep">
+    <div class="mx-auto wide px-6 sm:px-8 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <p class="text-[13px] text-mist/70 leading-relaxed">
+        Written by <a class="link" href="https://x.com/davidtphung" target="_blank" rel="noopener">David T Phung</a>.
+        A study made on my own time. Brand language and color sampled from theoceancompany.com on 30 May 2026.
+      </p>
+      <p class="text-[13px] text-mist/70">
+        <a class="link" href="index.html">See the campaign site</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.rise');
+    if (reduce){ items.forEach(function(el){ el.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold:0.14, rootMargin:'0px 0px -6% 0px' });
+    items.forEach(function(el){ io.observe(el); });
+  })();
+  </script>
+</body>
+</html>

@@ -46,6 +46,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Ulysses" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -121,6 +125,8 @@
 
 <body class="font-sans text-mist antialiased">
 
+  <a href="#manifesto" class="sr-only focus:not-sr-only focus:fixed focus:z-[80] focus:top-3 focus:left-3 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-blue focus:text-white focus:font-bold focus:shadow-lg">Skip to content</a>
+
   <div id="progress" class="fixed top-0 left-0 z-[60] h-[3px] w-0 bg-gradient-to-r from-cyan via-blue to-blue-soft"></div>
 
   <!-- ambient field -->
@@ -156,7 +162,7 @@
     </nav>
   </header>
 
-  <div id="mobileMenu" class="fixed inset-0 z-[55] hidden lg:hidden">
+  <div id="mobileMenu" class="fixed inset-0 z-[55] hidden lg:hidden" role="dialog" aria-modal="true" aria-label="Site menu">
     <div class="absolute inset-0 bg-navy-deep/95 backdrop-blur-xl"></div>
     <div class="relative h-full flex flex-col items-center justify-center gap-8 font-display text-3xl text-white">
       <button id="menuClose" class="absolute top-5 right-5 h-10 w-10 rounded-lg ring-1 ring-blue/30 text-blue grid place-items-center" aria-label="Close menu">
@@ -509,6 +515,7 @@
           <ul class="mt-4 space-y-2 text-sm">
             <li><a href="https://x.com/davidtphung" target="_blank" rel="noopener" class="text-mist hover:text-cyan transition">@davidtphung on X →</a></li>
             <li><a href="mailto:davidtphung@nlt143.energy" class="text-mist hover:text-cyan transition">davidtphung@nlt143.energy</a></li>
+            <li><a href="assets/brief.pdf" target="_blank" rel="noopener" class="text-mist hover:text-cyan transition">Download the brief (PDF) ↓</a></li>
             <li><a href="#enlist" class="text-mist hover:text-cyan transition">Report for duty</a></li>
           </ul>
         </div>
@@ -542,12 +549,22 @@
       window.addEventListener('mousemove', function(e){ tx=(e.clientX/window.innerWidth-0.5); ty=(e.clientY/window.innerHeight-0.5); if(!raf) raf=requestAnimationFrame(tick); }, {passive:true});
       function tick(){ cx+=(tx-cx)*0.06; cy+=(ty-cy)*0.06; layers.forEach(function(l){ var s=parseFloat(l.dataset.parallax)*100; l.style.transform='translate('+(cx*s).toFixed(2)+'px,'+(cy*s).toFixed(2)+'px)'; }); if(Math.abs(tx-cx)>0.001||Math.abs(ty-cy)>0.001){raf=requestAnimationFrame(tick);} else {raf=null;} } }
 
-    /* mobile menu */
+    /* mobile menu (focus management + trap) */
     var menu=document.getElementById('mobileMenu'), mb=document.getElementById('menuBtn'), mc=document.getElementById('menuClose');
-    function setMenu(o){ menu.classList.toggle('hidden',!o); mb.setAttribute('aria-expanded',String(o)); document.body.style.overflow=o?'hidden':''; }
+    function menuFocusables(){ return menu.querySelectorAll('a[href],button'); }
+    function setMenu(o){
+      menu.classList.toggle('hidden',!o); mb.setAttribute('aria-expanded',String(o)); document.body.style.overflow=o?'hidden':'';
+      if(o){ var f=menuFocusables(); if(f.length) f[0].focus(); } else { mb.focus(); }
+    }
     mb.addEventListener('click',function(){setMenu(true);}); mc.addEventListener('click',function(){setMenu(false);});
     menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
-    document.addEventListener('keydown',function(e){ if(e.key==='Escape') setMenu(false); });
+    document.addEventListener('keydown',function(e){
+      if(menu.classList.contains('hidden')) return;
+      if(e.key==='Escape'){ setMenu(false); return; }
+      if(e.key==='Tab'){ var f=menuFocusables(); if(!f.length) return; var first=f[0], last=f[f.length-1];
+        if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+        else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); } }
+    });
 
     /* sonar sweep */
     var sweep=document.getElementById('sweep'); var ang=0;
@@ -566,7 +583,7 @@
     /* scrollspy: highlight the active nav link */
     var navLinks={}; document.querySelectorAll('.nlink').forEach(function(a){ navLinks[a.getAttribute('href')]=a; });
     var spySections=['manifesto','fleet','moodboard','heritage'].map(function(id){return document.getElementById(id);}).filter(Boolean);
-    if(spySections.length){ var spy=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ Object.keys(navLinks).forEach(function(k){navLinks[k].classList.remove('on');}); var on=navLinks['#'+e.target.id]; if(on) on.classList.add('on'); } }); }, {rootMargin:'-45% 0px -50% 0px', threshold:0}); spySections.forEach(function(s){spy.observe(s);}); }
+    if(spySections.length){ var spy=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ Object.keys(navLinks).forEach(function(k){navLinks[k].classList.remove('on');navLinks[k].removeAttribute('aria-current');}); var on=navLinks['#'+e.target.id]; if(on){ on.classList.add('on'); on.setAttribute('aria-current','true'); } } }); }, {rootMargin:'-45% 0px -50% 0px', threshold:0}); spySections.forEach(function(s){spy.observe(s);}); }
 
     /* heritage scroller arrows */
     var hs=document.getElementById('heritageScroll'), hp=document.getElementById('hPrev'), hn=document.getElementById('hNext');

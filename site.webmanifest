@@ -1,0 +1,15 @@
+{
+  "name": "Ulysses · Enduring Odyssey Watch",
+  "short_name": "Ulysses",
+  "description": "Through endurance, we steward the blue. Campaign microsite and creative direction by David T Phung.",
+  "start_url": "/ulysses-odyssey/",
+  "scope": "/ulysses-odyssey/",
+  "display": "standalone",
+  "background_color": "#00121F",
+  "theme_color": "#001E38",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
